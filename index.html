@@ -41,10 +41,52 @@
 				<section>Slide 2
 					<h1>About My Product</h1>
 					<p>My product discussed here</p>
+				</section>
+
+				<section>Slide 2
 					<section>
-					  <p>Math Formula</p>
-					  $\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$
+						<div id='container'>
+							<img src="images/pic_main.png" style='float: right;' max-height="60%"/>
+							<p>some text (that will now wrap around the image)</p>
+						</div>
 					</section>
+					<section>
+						<div id='container'>
+							<p>some text (that will now wrap around the image)</p>
+							<p>some text (that will now wrap around the image)</p>
+							<p>some text (that will now wrap around the image)</p>
+							<p>some text (that will now wrap around the image)</p>
+							<img src="images/pic_customized.png" style='float: top;' height="100"/>
+						</div>
+					</section>
+				</section>
+
+				<section data-markdown>
+				### Agenda
+				- Storm
+				- Questions
+				![input page](images/pic_input.png "input page")
+				</section>
+
+				<section>
+					<h2>Deployment</h2>
+					<p>Configuration is stored in shell scripts that launch topologies</p>
+					<pre>
+						<code data-trim>
+						storm jar /topolgoies/data-storm-0.0.3-SNAPSHOT.jar com.lookout.data.topology.KafkaToHdfsTopology \
+						-topologyname kafka-hdfs \
+						...
+						-D statsd.host=statsdhost
+						</code>
+					</pre>
+				</section>
+
+				<section perl>
+				  <script type="text/template">
+						# Test markdown
+						<img src="/images/pic_input.png" height="100" width="200">
+						# ahaha
+				  </script>
 				</section>
 
 			</div>
@@ -58,19 +100,18 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				transitionSpeed: 'default', // default / fast / slow
-				backgroundTransition: 'zoom', // none/fade/slide/convex/concave/zoom
-
-				math:{
-					mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
-					config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
-				},
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				backgroundTransition: 'zoom', // Not working?!?!?
 
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 		</script>
