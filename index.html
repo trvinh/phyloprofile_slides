@@ -51,22 +51,37 @@
 							<p>
 								<ul>
 									<li style="font-size:30px">Shiny(R)-based</li>
-									<li style="font-size:30px">integrate, visualize and explore<br> multi-layered phylogenetic profiles</li>
+									<li style="font-size:30px">integrate, <span style="color: #FF0000">dynamically</span> visualize and explore<br> <span style="color: #FF0000">multi-layered</span> phylogenetic profiles</li>
 								</ul>
 							</p>
 						</div>
 					</section>
+
 					<section>
-						<p style="font-size:30px">Multi-layers</p>
+						<p>
+							<img src="images/cutoff_var.png" style='float: top; border:0' height=50/>
+							<li style="font-size:20px"><span style="color: #FF0000">dynamically</span> filter & analyze profiles with different thresholds</li>
+							<div style="width:500px; margin:0 auto;">
+								<div style="float:left; width:100 px"><img src="images/seed_taxon_2.png" style='float: top; border:0' height=200/></div>
+								<div style="float:top; width:100 px"><img src="images/subset_gene_taxa.png" style='float: top; border:0' height=200/></div>
+							</div>
+							<li style="font-size:20px"><span style="color: #FF0000">dynamically</span> change the resolution of the profile analysis</li>
+							<img src="images/plot_setting.png" style='float: top; border:0' height=100/>
+							<li style="font-size:20px"><span style="color: #FF0000">dynamically</span> change profile properties</li>
+						</p>
+					</section>
+
+					<section>
+						<p style="font-size:30px"><span style="color: #FF0000">Multi-layers</span></p>
 						<p style="font-size:30px">=</p>
 						<p style="font-size:30px">presence/absence pattern + two additional information</p>
 						<br>
 						<p>
 							<ul>
-								<li style="font-size:20px">Sequence similarity</li>
-								<li style="font-size:20px">Domain architectures similarity</li>
-								<li style="font-size:20px">Gene Ontology-term-based semantic similarities</li>
-								<li style="font-size:20px">Taxanomy distances</li>
+								<li style="font-size:20px">sequence similarity</li>
+								<li style="font-size:20px">domain architectures similarity</li>
+								<li style="font-size:20px">gene Ontology-term-based semantic similarities</li>
+								<li style="font-size:20px">taxanomy distances</li>
 								<li style="font-size:20px">etc.</li>
 							</ul>
 						</p>
@@ -216,7 +231,7 @@
 							<img src="images/detailed_plot.png" style='float: top; border:0' height=400/>
 							<p>
 								<ul>
-									<li style="font-size:30px">Detail scores for 2 additional vairables</li>
+									<li style="font-size:30px">detail scores for 2 additional vairables</li>
 									<li style="font-size:30px">FASTA sequence of ortholog</li>
 								</ul>
 							</p>
@@ -229,6 +244,81 @@
 							<img src="images/domain_plot.png" style='float: top; border:0' height=400/>
 							<p style="font-size:30px">for comparing protein architectures</p>
 						</div>
+					</section>
+
+				</section>
+
+				<!-- SLIDE 6 customized profile -->
+				<section>
+					<h5 style="color: white; background-color: #6baed6"><strong>Customized profile</strong></h5>
+					<section>
+						<img src="images/customized_profile.png" style='float: top; border:0' height="550"/>
+					</section>
+
+					<section>
+						<div id='customized_profile'>
+							<div style="width:800px; margin:0 auto;">
+								<div style="float:left; width:200 px"><img src="images/subset_taxa.png" style='float: top; border:0' height=300/></div>
+								<div style="float:left; width:30 px"><img src="images/arrow_right.png" style='float: top; border:0; box-shadow:none' height=100/></div>
+								<div style="float:top; width:100 px"><img src="images/subset_gene_taxa.png" style='float: top; border:0' height=300/></div>
+							</div>
+							<p>
+								<ul>
+									<li style="font-size:30px">subset of taxa and/or genes</li>
+									<li style="font-size:30px">add manually from list of file or choose from <a href="#/7">analysis functions</a></li>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+				</section>
+
+				<!-- SLIDE 7 functions -->
+				<section>
+					<h5 style="color: white; background-color: #6baed6"><strong>Analysis functions</strong></h5>
+					<section>
+						<img src="images/function_menu.png" style='float: top; border:0' height="300"/>
+					</section>
+
+					<section>
+						<p style="font-size:30px">Profile clustering</p>
+						<img src="images/function_profile_cluster.pdf" style='float: top; border:0' height="300"/>
+						<p style="font-size:20px">cluster similar profiles based on distance matrix</p>
+						<p style="font-size:20px; font-style: italic">*list of selected genes can be submitted to customized profile</p>
+					</section>
+
+					<section>
+						<p style="font-size:30px">Distribution analysis</p>
+						<img src="images/function_distribution_analysis.pdf" style='float: top; border:0' height="400"/>
+					</section>
+
+					<section>
+						<p style="font-size:30px">Gene age estimation</p>
+						<img src="images/function_age_estimation.pdf" style='float: top; border:0' height="400"/>
+						<p style="font-size:20px; font-style: italic">*list of selected genes that have he same estimated age can be submitted to customized profile</p>
+					</section>
+
+					<section>
+						<p style="font-size:30px">Consensus gene finding</p>
+						<img src="images/function_consensus_finding.pdf" style='float: top; border:0' height="400"/>
+						<p style="font-size:20px">search for genes that have orthologs in all selected taxa</p>
+						<p style="font-size:20px; font-style: italic">*those genes can then be submitted to customized profile</p>
+					</section>
+
+					<section>
+						<p style="font-size:30px">Search NCBI taxonomy IDs</p>
+						<p style="font-size:20px">for a given list of taxa names</p>
+						<img src="images/function_search_ncbi.png" style='float: top; border:0' height="400"/>
+					</section>
+
+				</section>
+
+				<!-- SLIDE 8 download-->
+				<section>
+					<h5 style="color: white; background-color: #6baed6"><strong>Download filtered data</strong></h5>
+					<section>
+						<img src="images/download_data.pdf" style='float: top; border:0' height="400"/>
+						<p style="font-size:30px">filtered data from main and customized profiles</p>
 					</section>
 
 				</section>
