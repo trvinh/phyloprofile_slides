@@ -25,10 +25,12 @@
 		<div class="reveal">
 			<div class="slides">
 
+				<!-- SLIDE 1 title -->
 				<section>
 					<h1>PhyloProfile</h1>
 				</section>
 
+				<!-- SLIDE 2 introduction -->
 				<section>
 					<h5 style="color: white; background-color: #6baed6"><strong>Introduction</strong></h5>
 					<section>
@@ -39,36 +41,39 @@
 					</section>
 				</section>
 
+				<!-- SLIDE 2 introduction -->
 				<section>
 					<h5 style="color: white; background-color: #6baed6"><strong>Introduction</strong></h5>
 					<section>
 						<div id='intro'>
+							<p>PhyloProfile tool</p>
 							<img src="images/main_plot.pdf" style='float: top; border:0' height=300/>
 							<p>
 								<ul>
-									<li>Shiny(R)-based</li>
-									<li>integrate, visualize and explore<br> multi-layered phylogenetic profiles</li>
+									<li style="font-size:30px">Shiny(R)-based</li>
+									<li style="font-size:30px">integrate, visualize and explore<br> multi-layered phylogenetic profiles</li>
 								</ul>
 							</p>
 						</div>
 					</section>
 					<section>
-						<p>Multi-layers</p>
-						<p>=</p>
-						<p>presence/absence pattern + two additional information</p>
+						<p style="font-size:30px">Multi-layers</p>
+						<p style="font-size:30px">=</p>
+						<p style="font-size:30px">presence/absence pattern + two additional information</p>
 						<br>
 						<p>
 							<ul>
-								<li>Sequence similarity</li>
-								<li>Domain architectures similarity</li>
-								<li>Gene Ontology-term-based semantic similarities</li>
-								<li>Taxanomy distances</li>
-								<li>etc.</li>
+								<li style="font-size:20px">Sequence similarity</li>
+								<li style="font-size:20px">Domain architectures similarity</li>
+								<li style="font-size:20px">Gene Ontology-term-based semantic similarities</li>
+								<li style="font-size:20px">Taxanomy distances</li>
+								<li style="font-size:20px">etc.</li>
 							</ul>
 						</p>
 					</section>
 				</section>
 
+				<!-- SLIDE 3 input -->
 				<section>
 					<h5 style="color: white; background-color: #6baed6"><strong>Input</strong></h5>
 					<section>
@@ -76,10 +81,10 @@
 							<img src="https://github.com/trvinh/phyloprofile/raw/master/www/pic_input.png" style='float: top; border:0' height=300/>
 							<p>
 								<ul>
-									<li>Main & additional annotation input</li>
-									<li>Variables</li>
-									<li>Configurations</li>
-									<li>Seed taxon selection</li>
+									<li style="font-size:30px"><a href="#/3/1">Main</a> & <a href="#/3/4">additional</a> annotation input</li>
+									<li style="font-size:30px"><a href="#/3/5">Variables</a></li>
+									<li style="font-size:30px"><a href="#/3/6">Configurations</a></li>
+									<li style="font-size:30px"><a href="#/3/7">Seed taxon selection</a></li>
 								</ul>
 							</p>
 						</div>
@@ -87,41 +92,63 @@
 					<section>
 						<div id='main_input'>
 							<p>Main input</p>
+							<p style="font-size:20px">presence/absence pattern + up to 2 additional variables</p>
 							<img src="images/input_xml.pdf" style='float: top; border:0' height=300/>
-							<p><a target="_blank" href="http://www.orthoxml.org/xml/Main.html">orthoXML</a> format</p>
+							<p style="font-size:30px"><a target="_blank" href="https://raw.githubusercontent.com/trvinh/phyloprofile/master/data/demo/test.main.xml">orthoXML</a> format</p>
+							<p style="font-size:20px"><a target="_blank" href="http://www.orthoxml.org/xml/Main.html">supported</a> by OMA, OrthoMCL, InParanoid, Hieranoid, Panther, Roundup, etc.</p>
 						</div>
 					</section>
 					<section>
 						<div id='main_input'>
 							<p>Main input</p>
-							<img src="images/input_long.pdf" style='float: top; border:0' height=300/>
-							<p><a target="_blank" href="https://raw.githubusercontent.com/trvinh/phyloprofile/master/data/demo/test.main.long">long</a> format</p>
+							<p style="font-size:20px">presence/absence pattern + up to 2 additional variables</p>
+							<img src="images/input_long.pdf" style='float: top; border:0' height=200/>
+							<p style="font-size:30px"><a target="_blank" href="https://raw.githubusercontent.com/trvinh/phyloprofile/master/data/demo/test.main.long">long</a> format</p>
+							<p style="font-size:20px">tab delimited file containing 5 columns: geneID, ncbiID ("ncbi"+taxonID), orthoID, var1, var2</p>
 						</div>
 					</section>
 					<section>
 						<div id='main_input'>
 							<p>Main input</p>
-							<img src="images/input_wide.pdf" style='float: top; border:0' height=150/>
-							<p><a target="_blank" href="https://raw.githubusercontent.com/trvinh/phyloprofile/master/data/demo/test.main">matrix (wide)</a> format</p>
+							<p style="font-size:20px">presence/absence pattern + up to 2 additional variables</p>
+							<img src="images/input_wide.pdf" style='float: top; border:0' height=120/>
+							<p style="font-size:30px"><a target="_blank" href="https://raw.githubusercontent.com/trvinh/phyloprofile/master/data/demo/test.main">matrix (wide)</a> format</p>
+							<p style="font-size:20px">each cell contains orthoID#var1#var2</p>
 						</div>
 					</section>
 
 					<section>
 						<div id='anno_input'>
 							<p>Annotation input (optional)</p>
-							<img src="images/input_wide.pdf" style='float: top; border:0' height=200/>
-							<p><a target="_blank" href="https://github.com/trvinh/phyloprofile/tree/master/data/demo/domains">File(s)</a> contain annotation info</p>
+							<p style="font-size:20px">contains <a target="_blank" href="https://github.com/trvinh/phyloprofile/tree/master/data/demo/domains">domain annotations</a> or structural information</p>
+							<img src="images/input_domain.png" style='float: top; border:0' height=200/>
 						</div>
 					</section>
 
 					<section>
 						<div id='variables_input'>
 							<p>Variables</p>
-							<img src="images/input_wide.pdf" style='float: top; border:0' height=200/>
+							<img src="images/variables_input.png" style='float: top; border:0' height=150/>
 							<p>
 								<ul>
-									<li>Naming of 2 information layers</li>
-									<li>Method of aggregation (max, min, mean or median)</li>
+									<li style="font-size:30px">2 additional information layers</li>
+									<li style="font-size:30px">Value of aggregation (max, min, mean or median)</li>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+					<section>
+						<div id='config_input'>
+							<p>Configurations</p>
+							<div style="width:400px; margin:0 auto;">
+								<div style="float:left; width:100 px"><img src="images/config_fasta.png" style='float: top; border:0' height=300/></div>
+								<div style="float:top; width:100 px"><img src="images/config_color.png" style='float: top; border:0' height=300/></div>
+							</div>
+							<p>
+								<ul>
+									<li style="font-size:30px">set path to sequence files</li>
+									<li style="font-size:30px">change colors for profile plots</li>
 								</ul>
 							</p>
 						</div>
@@ -130,59 +157,82 @@
 					<section>
 						<div id='taxon_input'>
 							<p>Seed taxon selection</p>
-							<img src="images/input_wide.pdf" style='float: top; border:0' height=200/>
-							<p>higher taxonomy level = more general</p>
+							<div style="width:600px; margin:0 auto;">
+								<div style="float:left; width:100 px"><img src="images/seed_taxon_1.png" style='float: top; border:0' height=250/></div>
+								<div style="float:top; width:100 px"><img src="images/seed_taxon_2.png" style='float: top; border:0' height=250/></div>
+							</div>
+							<p style="font-size:30px">higher taxonomy level = more general analysis</p>
 						</div>
 					</section>
 
-
 				</section>
 
-				<section>Slide 2
-					<section>
-						<div id='container'>
-							<img src="https://github.com/trvinh/phyloprofile/raw/master/www/pic_customized.png" style='float: right;' max-height="60%"/>
-							<p>some text (that will now wrap around the image)</p>
-						</div>
-					</section>
-					<section>
-						<div id='container'>
-							<p>some text (that will now wrap around the image)</p>
-							<p>some text (that will now wrap around the image)</p>
-							<p>some text (that will now wrap around the image)</p>
-							<p>some text (that will now wrap around the image)</p>
-							<img src="https://github.com/trvinh/phyloprofile/raw/master/www/pic_customized.png" style='height: 50%; width: 50%'/>
-						</div>
-					</section>
-				</section>
-
-				<section data-markdown>
-				### Agenda
-				- Storm
-				- Questions
-				![input page](https://github.com/trvinh/phyloprofile/raw/master/www/pic_customized.png "input page")
-				</section>
-
+				<!-- SLIDE 4 main profile -->
 				<section>
-					<h2>Deployment</h2>
-					<p>Configuration is stored in shell scripts that launch topologies</p>
-					<pre>
-						<code data-trim>
-						storm jar /topolgoies/data-storm-0.0.3-SNAPSHOT.jar com.lookout.data.topology.KafkaToHdfsTopology \
-						-topologyname kafka-hdfs \
-						...
-						-D statsd.host=statsdhost
-						</code>
-					</pre>
+					<h5 style="color: white; background-color: #6baed6"><strong>Main profile</strong></h5>
+					<section>
+						<img src="https://github.com/trvinh/phyloprofile/raw/master/www/pic_main.png" style='float: top; border:0' max-height="60%"/>
+					</section>
+
+					<section>
+						<div id='plot_setting'>
+							<p>Profile properties</p>
+							<img src="images/plot_setting.png" style='float: top; border:0' height=150/>
+						</div>
+					</section>
+
+					<section>
+						<div id='thresholds'>
+							<p>Variable thresholds</p>
+							<img src="images/thresholds.png" style='float: top; border:0' height=150/>
+							<div style="width:800px; margin:0 auto;">
+								<div style="float:left; width:100 px"><img src="images/main_plot_before.png" style='float: top; border:0' height=200/></div>
+								<div style="float:left; width:30 px"><img src="images/arrow_right.png" style='float: top; border:0; box-shadow:none' height=100/></div>
+								<div style="float:top; width:100 px"><img src="images/main_plot_after.png" style='float: top; border:0' height=200/></div>
+							</div>
+							<p style="font-size:30px">dynamically filter profile</p>
+						</div>
+					</section>
+
+					<section>
+						<div id='point_info'>
+							<p>Point's info</p>
+							<img src="images/point_info.png" style='float: top; border:0' height=300/>
+							<p style="font-size:30px">info of a selected point on the profile</p>
+						</div>
+					</section>
+
 				</section>
 
-				<section perl>
-				  <script type="text/template">
-						# Test markdown
-						<img src="/images/pic_input.png" height="100" width="200">
-						# ahaha
-				  </script>
+				<!-- SLIDE 5 detail information -->
+				<section>
+					<h5 style="color: white; background-color: #6baed6"><strong>Detail information</strong></h5>
+					<section>
+						<img src="images/detail_info_main.pdf" style='float: top; border:0' max-height="60%"/>
+					</section>
+
+					<section>
+						<div id='detailed_plot'>
+							<img src="images/detailed_plot.png" style='float: top; border:0' height=400/>
+							<p>
+								<ul>
+									<li style="font-size:30px">Detail scores for 2 additional vairables</li>
+									<li style="font-size:30px">FASTA sequence of ortholog</li>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+					<section>
+						<div id='domain_plot'>
+							<p>Domain architecture plot</p>
+							<img src="images/domain_plot.png" style='float: top; border:0' height=400/>
+							<p style="font-size:30px">for comparing protein architectures</p>
+						</div>
+					</section>
+
 				</section>
+
 
 			</div>
 		</div>
